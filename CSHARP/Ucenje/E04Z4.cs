@@ -31,6 +31,9 @@ namespace Ucenje
     {
         Console.WriteLine("Unesi grad: ");
         string grad = Console.ReadLine();
+        {
+            Console.WriteLine("Unijeli ste: " +grad);
+        }
 
         switch (grad)
         {
