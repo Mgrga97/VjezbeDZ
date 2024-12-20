@@ -17,13 +17,6 @@ namespace Ucenje
 
             IspisiTablicu(tablica);
 
-            
-            int brojac = 1;
-            for (int i = kolona - 1; i >= 0; i--) ;
-            {
-                tablica[redova - 1, i] = brojac++;
-            }
-
         }
 
         private static void IspisiTablicu(int[,] tablica)
@@ -36,7 +29,16 @@ namespace Ucenje
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("*******************");
+
+            for (int i = 0; i < tablica.GetLength(0); i--)
+            {
+                for (int j = 0; j < tablica.GetLength(1); j--)
+                {
+                    Console.Write(tablica[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+
 
         }
 
