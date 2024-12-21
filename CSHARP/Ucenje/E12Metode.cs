@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -183,6 +184,12 @@ namespace Ucenje
             }
 
            // return "";
+        }
+
+        public static bool UcitajBool(string poruka, string uvjetZaTrue)
+        {
+            Console.Write(poruka);
+            return Console.ReadLine().Trim().ToUpper()==uvjetZaTrue.ToUpper();
         }
 
 

@@ -2,13 +2,15 @@
 
 using Ucenje;
 
-E07CiklicnaTablica.Izvedi();
+// E07CiklicnaTablica.Izvedi();
 
 // E13Z2.Izvedi();
 
 // E13Z1.Izvedi();
 
 // E13Rekurzija.Izvedi();
+
+E10Z1.Izvedi();
 
 // E07Z2.Izvedi();
 
