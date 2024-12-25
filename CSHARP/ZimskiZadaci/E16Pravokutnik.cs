@@ -10,7 +10,20 @@ namespace ZimskiZadaci
     {
         public static void Izvedi()
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
+            Console.Write("Unesi dužinu pravokutnika: ");
+            int duzina = int.Parse(Console.ReadLine());
+
+            
+            Console.Write("Unesi širinu pravokutnika: ");
+            int sirina = int.Parse(Console.ReadLine());
+
+            // Izračunavanje površine
+            int povrsina = duzina * sirina;
+
+            // Prikaz rezultata
+            Console.WriteLine("Površina pravokutnika je: ",povrsina);
+            Console.WriteLine(povrsina);
 
         }
     }
