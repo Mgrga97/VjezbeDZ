@@ -10,8 +10,8 @@ namespace Ucenje
     {
         public static void Izvedi()
         {
-            int kolona = 5; E12Metode.UcitajCijeliBroj("Unesi broj kolona: ");
-            int redova = 5; E12Metode.UcitajCijeliBroj("Unesi broj redova: ");
+            int kolona = E12Metode.UcitajCijeliBroj("Unesi broj kolona: ");
+            int redova = E12Metode.UcitajCijeliBroj("Unesi broj redova: ");
 
             int[,] tablica =  new int[kolona, redova];
 

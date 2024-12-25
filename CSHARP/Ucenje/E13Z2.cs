@@ -39,23 +39,25 @@ namespace Ucenje
 
         private static void Zad2()
         {
-            string ime, prezime;
-            while (true)
-            {
-                ime = E12Metode.UcitajString("Unesi ime: ");
-                prezime = E12Metode.UcitajString("Unesi prezime: ");
-                Console.WriteLine("{0} {1}", prezime, ime);
+            // lakši način, ovo dolje je bespotrebno kompliciranje
 
-                if (E12Metode.UcitajString("DA za još: ").ToUpper() != "DA")
-                {
-                    break;
-                }
-            }
+            string ime = E12Metode.UcitajString("Unesi ime: ");
+            string prezime = E12Metode.UcitajString("Unesi prezime: ");
+            Console.WriteLine("{0} {1}", prezime, ime);
 
         }
-        // lakši način, ovo iznad je bespotrebno kompliciranje
-        // string ime = E12Metode.UcitajString("Unesi ime: ");
-        // string prezime = E12Metode.UcitajString("Unesi prezime: ");
-        // Console.WriteLine("{0} {1}",prezime,ime);
+        //string ime, prezime;
+        //   while (true)
+        // {
+        //ime = E12Metode.UcitajString("Unesi ime: ");
+        //prezime = E12Metode.UcitajString("Unesi prezime: ");
+        //Console.WriteLine("{0} {1}", prezime, ime);
+
+        // if (E12Metode.UcitajString("DA za još: ").ToUpper() != "DA")
+        // {
+        //break;
+        //   }
+        // }
+
     }
 }
