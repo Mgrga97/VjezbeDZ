@@ -1,6 +1,6 @@
 ﻿using ZimskiZadaci;
 
-Class1.Izvedi();
+E16Pravokutnik.Izvedi();
 
 // See https://aka.ms/new-console-template for more information
 

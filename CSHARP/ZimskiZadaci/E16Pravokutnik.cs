@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZimskiZadaci
 {
-    internal class Class1
+    internal class E16Pravokutnik
     {
         public static void Izvedi()
         {
