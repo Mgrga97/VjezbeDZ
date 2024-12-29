@@ -38,7 +38,7 @@
             int prvibrojkvadrat = prvibroj + prvibroj;
             int drugibrojkvadrat = drugibroj + drugibroj;
 
-            Console.WriteLine("zbroj kvadrata: " + prvibrojkvadrat * drugibroj);
+            Console.WriteLine("zbroj kvadrata: " + prvibrojkvadrat * drugibrojkvadrat);
 
             // kvocijent prvog i drugog broja
 
