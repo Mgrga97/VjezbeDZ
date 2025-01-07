@@ -1,6 +1,6 @@
 ﻿using ZimskiZadaci;
 
- E16Z5FibonaccijevNiz.Izvedi();
+// E16Z5FibonaccijevNiz.Izvedi();
 
 // E16Z9NizUnazad.Izvedi();
 
@@ -8,7 +8,7 @@
 
 // E16Z6StringUnazad.Izvedi();
 
-// E16Z3ZbrojNiza.Izvedi();
+ E16Z3ZbrojNiza.Izvedi();
 
 // E16Z2ProvjeraBroja.Izvedi();
 
