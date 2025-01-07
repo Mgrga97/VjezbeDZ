@@ -1,5 +1,11 @@
 ﻿using ZimskiZadaci;
 
+ E16Z5FibonaccijevNiz.Izvedi();
+
+// E16Z9NizUnazad.Izvedi();
+
+// E16Z4ProsjekOcjena.Izvedi();
+
 // E16Z6StringUnazad.Izvedi();
 
 // E16Z3ZbrojNiza.Izvedi();

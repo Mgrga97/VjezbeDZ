@@ -44,6 +44,17 @@ namespace Ucenje
             }
 
 
+            // zbroj prvih 100 brojeva
+            //FOR petljom
+            int suma = 0;
+            for(int i = 0; i <= 100; i++)
+            {
+                suma += i;
+            }
+            Console.WriteLine(suma);
+
+
+            //WHILE petljom
             int sum = 0;
             broj = 1;
             while (broj <= 100)

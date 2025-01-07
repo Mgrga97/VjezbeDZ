@@ -16,11 +16,11 @@ namespace Ucenje
 
         public static void Izvedi()
         {
-            Console.WriteLine("Unesite cijeli broj; ");
-        int broj = int.Parse(Console.ReadLine());
+            Console.Write("Unesite cijeli broj: ");
+            int broj = int.Parse(Console.ReadLine());
             if (broj % 2 == 0)
             {
-              int sum = 0;
+                int sum = 0;
                 for (int i = 1; i <= broj; i++)
                 {
                     sum += i;
@@ -29,9 +29,9 @@ namespace Ucenje
             }
             else
             {
-                for (int i = 1; i<=broj; i++)
+                for (int i = 1; i <= broj; i++)
                 {
-                    if (i % 2 != 0)
+                    if (i % 2 == 1)
                     {
                         if (i == broj || i == broj - 1)
                         {
@@ -39,25 +39,25 @@ namespace Ucenje
                         }
                         else
                         {
-                            Console.Write(i +", ");
+                            Console.Write(i + ", ");
                         }
                     }
 
                 }
             }
 
-            
-        
-        
+
+
+
         }
 
 
 
 
-            
 
-                
-       
+
+
+
 
     }
 }

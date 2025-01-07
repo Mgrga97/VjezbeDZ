@@ -9,6 +9,9 @@ namespace ZimskiZadaci
 {
     internal class E16Z1Pravokutnik
     {
+
+        // Tražimo korisnika unos dužine i širine pravokutnika, program računa pa ispisuje njegovu površinu 
+        
         public static void Izvedi()
         {
             //Console.WriteLine("Hello World!");

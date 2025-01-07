@@ -10,23 +10,29 @@ using Ucenje;
 
 // E13Rekurzija.Izvedi();
 
+// E12Z1.Izvedi();
+
+// E10Z2.Izvedi();
+
 // E10Z1.Izvedi();
 
-// E07CiklicnaTablica.Izvedi();
+// E09Z2.Izvedi();
+
+// E09Z1.Izvedi();
+
+ E07CiklicnaTablica.Izvedi();
 
 // E07Z2.Izvedi();
 
-// E04Z4If.Izvedi();
+// E07Z1.Izvedi();
 
-// E04Z4.Izvedi();
+// E04Z4Switch.Izvedi();
+
+// E04Z4If.Izvedi();
 
 // E04Z3.Izvedi();
 
 // E04Z2.Izvedi();
-
-// E06Nizovi.Izvedi();
-
-// E05UvjetnoGrananjeSwitch.Izvedi();
 
 // E04Z1.Izvedi();
 

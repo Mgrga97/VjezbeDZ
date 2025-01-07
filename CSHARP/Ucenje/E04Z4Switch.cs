@@ -25,7 +25,7 @@ namespace Ucenje
        */
 
 // dodatno: Odraditi istu logiku s switch
-    internal class E04Z4
+    internal class E04Z4Switch
 {
     public static void Izvedi()
     {

@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Ucenje
 {
+
+    // Program od korisnika traži unos cijelog broja
+    // Program ispisuje da li je uneseni broj paran ili ne
+
+
     internal class E04Z2
     {
         public static void Izvedi() 
@@ -22,6 +27,8 @@ namespace Ucenje
             {
                 Console.WriteLine("neparan");
             }
+
+            //Rješenje sa INLINE IF
 
             Console.WriteLine(broj % 2 == 0 ? "paran" : "neparan");
 

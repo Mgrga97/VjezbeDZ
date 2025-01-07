@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace Ucenje
 {
+
+    // Program unosi brojeve sve dok se ne unese broj -1
+    // Program ispisuje zbroj svih unesenih brojeva
+
     internal class E09Z2
     {
         public static void Izvedi()
