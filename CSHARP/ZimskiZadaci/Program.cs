@@ -1,9 +1,12 @@
 ﻿using ZimskiZadaci;
 
+// E16Z10Kalkulator.Izvedi();
 
 // E16Z9NizUnazad.Izvedi();
 
-E16Z7BrojacSamoglasnika.Izvedi();
+E16Z8PretvorbaTemperature.Izvedi();
+
+//E16Z7BrojacSamoglasnika.Izvedi();
 
 // E16Z6StringUnazad.Izvedi();
 
