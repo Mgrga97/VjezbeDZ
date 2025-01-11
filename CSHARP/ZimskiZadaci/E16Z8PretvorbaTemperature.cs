@@ -17,19 +17,14 @@ namespace ZimskiZadaci
         public static void Izvedi()
         {
 
-            Console.WriteLine("Odaberi koju mjernu jedinicu temperature želiš pretvarati: ");
-            Console.WriteLine("1. Fahrenheit u Celzijus");
-            Console.WriteLine("2. Celzijus u Fahrenheit");
-
-           
-            
-
-            
-
-            
             
             while (true)
             {
+
+
+                Console.WriteLine("Odaberi koju mjernu jedinicu temperature želiš pretvarati: ");
+                Console.WriteLine("1. Fahrenheit u Celzijus");
+                Console.WriteLine("2. Celzijus u Fahrenheit");
 
                 int izbor = E12Metode.UcitajCijeliBroj("");
                 if (izbor < 1 || izbor > 2)
@@ -39,32 +34,48 @@ namespace ZimskiZadaci
                 }
 
                 Console.WriteLine("Unesi temperaturu: ");
-                int temp;
-                int temperatura = int.Parse(Console.ReadLine());
+                int temperatura = E12Metode.UcitajCijeliBroj("");
 
+
+
+                int temp;
                 if (izbor == 1)
                 {
 
-                    
-                    
-
                     // Pretvaramo F° u C°
-                    temp = (temperatura - 32) / 5 * 9;
+                    temp = (temperatura - 32) * 5 / 9;
                     Console.WriteLine("Temperatura  je: {0}", temp + "°C");
 
                 }
-                else if (izbor == 2)
+                else 
                 {
+
                     // Pretvaramo C° u F°
-                    temp = (temperatura * 5 / 9) + 32;
+                    temp = (temperatura * 9)/ 5 + 32;
                     Console.WriteLine("{0}°C je {1}°F", temperatura, temp);
 
                 }
+
+                //Ponavljamo upit
+                Console.WriteLine("Želite li nastaviti? (da/ne)");
+                string odgovor = E12Metode.UcitajString("").ToLower();
+
+                //Ako je odgovor "da" naredba continue će vratiti na početak beskonačne petlje
+                while (odgovor != "da" && odgovor != "ne")
+                {
+                    Console.WriteLine("Neispravan unos. Molimo unesite 'da' ili 'ne'.");
+                    odgovor = E12Metode.UcitajString("").ToLower();
+                }
+
+                if (odgovor == "ne")
+                {
+                    break;
+                }
                 else
                 {
-                    Console.WriteLine("Greška kod unosa odabira");
+                    continue;
                 }
-                break;
+                
             }
             
 
