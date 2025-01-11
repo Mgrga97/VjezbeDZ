@@ -20,6 +20,8 @@ using Ucenje;
 
 // E09Z1.Izvedi();
 
+// CiklicnaTablica.Izvedi();
+
  E07CiklicnaTablica.Izvedi();
 
 // E07Z2.Izvedi();

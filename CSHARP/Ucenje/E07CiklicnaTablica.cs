@@ -20,70 +20,67 @@ namespace Ucenje
 
             int[,] tablica = new int[redovi, kolone];
 
-            PopuniTablicu(tablica);
-
-            IspisiTablicu(tablica);
-
-
-        }
-
-        public static void PopuniTablicu(int[,] tablica)
-        {
-            int redovi = tablica.GetLength(0);
-            int kolone = tablica.GetLength(1);
+            int maxvrijednost = redovi * kolone;
 
             int brojac = 1;
+
             int donjaGranica = redovi - 1;
             int gornjaGranica = 0;
             int lijevaGranica = 0;
             int desnaGranica = kolone - 1;
 
-            while(brojac <=redovi*kolone)
+            while (brojac <= maxvrijednost)
             {
                 // krecemo se od dolje desno prema lijevo u istom redu
-                for(int j = desnaGranica; j <= lijevaGranica; j--)
+                for (int j = desnaGranica; j >= lijevaGranica && brojac <= maxvrijednost; j--)
                 {
                     tablica[donjaGranica, j] = brojac++;
-                    donjaGranica--;
+
                 }
+                donjaGranica--;
 
                 IspisiTablicu(tablica);
 
                 // krecemo se  od dolje lijevo prema gore istom kolonom
-                for(int i=donjaGranica;i<= gornjaGranica; i--)
+                for (int i = donjaGranica; i >= gornjaGranica && brojac <= maxvrijednost; i--)
                 {
-                    tablica[i,lijevaGranica] = brojac++;
-                    gornjaGranica--;
+                    tablica[i, lijevaGranica] = brojac++;
+
                 }
+                lijevaGranica++;
 
                 // krecemo se prema desno do kraja kolone
-                for(int j =lijevaGranica;j<= desnaGranica; j++)
+                for (int j = lijevaGranica; j <= desnaGranica && brojac <= maxvrijednost; j++)
                 {
-                    tablica[gornjaGranica,j] = brojac++;
-                    gornjaGranica++;
+                    tablica[gornjaGranica, j] = brojac++;
+
                 }
+                gornjaGranica++;
 
                 //krecemo se prema dolje po granici desne strane (  u zadnjoj koloni )
-                for(int i=gornjaGranica;i<= desnaGranica; i++)
+                for (int i = gornjaGranica; i <= donjaGranica && brojac <= maxvrijednost; i++)
                 {
                     tablica[i, desnaGranica] = brojac++;
-                    desnaGranica--;
-                }
 
+                }
+                desnaGranica--;
             }
 
-            
+
+
         }
+
+
 
         private static void IspisiTablicu(int[,] tablica)
         {
-           
+
 
             for (int i = 0; i < tablica.GetLength(0); i++)
             {
                 for (int j = 0; j < tablica.GetLength(1); j++)
                 {
-                    Console.Write(tablica[i, j] + " ");
+                    Console.Write(tablica[i, j].ToString().PadLeft(4));
                 }
                 Console.WriteLine();
             }

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Ucenje;
 
 namespace ZimskiZadaci
@@ -15,35 +17,69 @@ namespace ZimskiZadaci
         public static void Izvedi()
         {
 
-            Console.WriteLine("Odaberi mjernu jedinicu za pretvorbu: "); 
+            Console.WriteLine("Odaberi koju mjernu jedinicu temperature želiš pretvarati: ");
             Console.WriteLine("1. Fahrenheit u Celzijus");
             Console.WriteLine("2. Celzijus u Fahrenheit");
 
-            int odabir = int.Parse(Console.ReadLine());
+           
+            
 
-            int temperatura = E12Metode.UcitajCijeliBroj("Unesi broj temperature za pretvorbu: ");
+            
 
-            int rezultat;
-
-
-            switch (odabir)
+            
+            
+            while (true)
             {
-                // Pretvaramo Fahrenheit u Celzijuse
-                case 1:
-                    rezultat = (temperatura - 32) * 5 / 9;
-                    Console.WriteLine("{0}°F je {1}°C",temperatura,rezultat);
-                    break;
 
-                //Pretvaramo Celzijus u Fahrenheit
-                case 2:
-                    rezultat = (temperatura * 9 / 5) + 32;
-                    Console.WriteLine("{0}°C je {1}°F", temperatura, rezultat);
-                    break;
+                int izbor = E12Metode.UcitajCijeliBroj("");
+                if (izbor < 1 || izbor > 2)
+                {
+                    Console.WriteLine("Broj nije u rasponu odabira (1 - 2)");
+                    continue;
+                }
 
-                default:
-                    Console.WriteLine("Neispravan unos");
-                    break;
+                Console.WriteLine("Unesi temperaturu: ");
+                int temp;
+                int temperatura = int.Parse(Console.ReadLine());
+
+                if (izbor == 1)
+                {
+
+                    
+                    
+
+                    // Pretvaramo F° u C°
+                    temp = (temperatura - 32) / 5 * 9;
+                    Console.WriteLine("Temperatura  je: {0}", temp + "°C");
+
+                }
+                else if (izbor == 2)
+                {
+                    // Pretvaramo C° u F°
+                    temp = (temperatura * 5 / 9) + 32;
+                    Console.WriteLine("{0}°C je {1}°F", temperatura, temp);
+
+                }
+                else
+                {
+                    Console.WriteLine("Greška kod unosa odabira");
+                }
+                break;
             }
+            
+
+
+            
+
+
+
+
+
+
+
+
+
+
 
 
         }
