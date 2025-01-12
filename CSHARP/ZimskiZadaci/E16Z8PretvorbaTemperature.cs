@@ -21,8 +21,10 @@ namespace ZimskiZadaci
             while (true)
             {
 
+                int izbor = E12Metode.UcitajCijeliBroj("Odaberi koju mjernu jedinicu temperature želiš pretvarati:\n1. Fahrenheit u Celzijus\n2. Celzijus u Fahrenheit\n", 1,2);
 
-                Console.WriteLine("Odaberi koju mjernu jedinicu temperature želiš pretvarati: ");
+
+               /* Console.WriteLine("Odaberi koju mjernu jedinicu temperature želiš pretvarati: ");
                 Console.WriteLine("1. Fahrenheit u Celzijus");
                 Console.WriteLine("2. Celzijus u Fahrenheit");
 
@@ -32,7 +34,7 @@ namespace ZimskiZadaci
                     Console.WriteLine("Broj nije u rasponu odabira (1 - 2)");
                     continue;
                 }
-
+                */
                 Console.WriteLine("Unesi temperaturu: ");
                 int temperatura = E12Metode.UcitajCijeliBroj("");
 
