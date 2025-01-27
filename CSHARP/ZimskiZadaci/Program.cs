@@ -1,6 +1,8 @@
 ﻿using ZimskiZadaci;
 
- E16Z10Kalkulator.Izvedi();
+E16LjubavniKalkulator.Izvedi();
+
+// E16Z10Kalkulator.Izvedi();
 
 // E16Z9NizUnazad.Izvedi();
 

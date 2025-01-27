@@ -8,6 +8,8 @@ using Ucenje;
 
 namespace ZimskiZadaci
 {
+
+    // Tražimo korisnika unos brojeva u niz, te ih ispisujemo unazad 
     internal class E16Z9NizUnazad
     {
         public static void Izvedi()

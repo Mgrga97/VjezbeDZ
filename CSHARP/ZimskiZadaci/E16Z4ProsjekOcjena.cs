@@ -7,6 +7,8 @@ using Ucenje;
 
 namespace ZimskiZadaci
 {
+
+    // Unosimo ocjene i računamo njihov prosjek
     internal class E16Z4ProsjekOcjena
     {
         public static void Izvedi()

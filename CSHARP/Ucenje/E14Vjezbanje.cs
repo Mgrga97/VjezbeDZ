@@ -92,8 +92,8 @@ namespace Ucenje
 
             string izraz = E12Metode.UcitajString("Unesi izraz: ").ToLower();
 
-            // Danas pada snijeg -> vanjska petlja
-            // Danas pada snijeg -> unutarnja petlja
+            // Danas pada snijeg -> vanjska petlja za brojanje slova u izrazu ( ide slovo po slovo do kraja (.Lenght) dok unutarnja broji koliko puta se pojavljuje to slovo)
+            // Danas pada snijeg -> unutarnja petlja za ispisivanje brojeva tih slova (kad dodje do kraja unutarnje petlje ispisuje broj pojavljivanja slova)
             int[] niz = new int[izraz.Length];
             bool[] ispisi = new bool[izraz.Length]; // njegove sve vrijednosti su false
             int b;
@@ -130,7 +130,7 @@ namespace Ucenje
             // Console.WriteLine(string.Join(",",niz));
             for (int i = 0; i < izraz.Length; i++)
             {
-                if (ispisi[i] && izraz[i]!=' ')
+                if (ispisi[i] && izraz[i] != ' ')
                 {
                     Console.Write("{0} ({1})", izraz[i], niz[i]);
                 }
@@ -165,10 +165,10 @@ namespace Ucenje
                 foreach (char c in broj)
                 {
                     rez += int.Parse(c.ToString());
-
+                    Console.WriteLine(rez);
                 }
 
-                // Console.WriteLine(rez);
+
                 broj = rez.ToString();
             }
 

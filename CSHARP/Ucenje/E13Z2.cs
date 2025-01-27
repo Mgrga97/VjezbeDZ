@@ -39,7 +39,7 @@ namespace Ucenje
 
         private static void Zad2()
         {
-            // lakši način, ovo dolje je bespotrebno kompliciranje
+            // lakši način
 
             string ime = E12Metode.UcitajString("Unesi ime: ");
             string prezime = E12Metode.UcitajString("Unesi prezime: ");

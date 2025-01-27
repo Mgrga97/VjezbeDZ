@@ -9,9 +9,11 @@ namespace ZimskiZadaci
 {
     internal class E16Z3ZbrojNiza
     {
+
+        // Zbrajamo unesene brojeve iz niza
         public static void Izvedi()
         {
-            // tražimo korisnika količinu brojeva za niz, unos brojčanih vrijednosti u niz, i sumu tih brojeva
+            // tražimo korisnika količinu brojeva za niz, unos brojčanih vrijednosti u niz, i dajemo sumu tih brojeva
 
             int velicinaNiza = E12Metode.UcitajCijeliBroj("Koliko brojeva želite unijeti u niz? ");
             int[] niz = new int[velicinaNiza];

@@ -2,7 +2,7 @@
 
 using Ucenje;
 
-
+E14Vjezbanje.Izvedi();
 
 // E13Z2.Izvedi();
 
@@ -22,7 +22,7 @@ using Ucenje;
 
 // CiklicnaTablica.Izvedi();
 
- E07CiklicnaTablica.Izvedi();
+// E07CiklicnaTablica.Izvedi();
 
 // E07Z2.Izvedi();
 

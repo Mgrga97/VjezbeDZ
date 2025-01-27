@@ -11,6 +11,8 @@ using Ucenje;
 
 namespace ZimskiZadaci
 {
+
+    // Pretvaranje Fahrenheit u Celzijus i obrnuto
     internal class E16Z8PretvorbaTemperature
     {
 

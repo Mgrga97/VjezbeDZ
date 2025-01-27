@@ -7,6 +7,8 @@ using Ucenje;
 
 namespace ZimskiZadaci
 {
+
+    // Provjeravamo je li broj pozitivan, negativan ili nula
     internal class E16Z2ProvjeraBroja
     {
         public static void Izvedi()
