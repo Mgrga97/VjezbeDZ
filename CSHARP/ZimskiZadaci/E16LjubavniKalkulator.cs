@@ -14,9 +14,9 @@ namespace ZimskiZadaci
 
         {
 
-            string ona = E12Metode.UcitajString("Unesi svoje ime: ");
+            string ona = E12Metode.UcitajString("Unesi svoje ime: "); //marta
 
-            string on = E12Metode.UcitajString("Unesi ime simpatije: ");
+            string on = E12Metode.UcitajString("Unesi ime simpatije: "); //manuel
 
             var SvaSlova = ona.Trim().ToLower() + on.Trim().ToLower();
 
@@ -25,28 +25,41 @@ namespace ZimskiZadaci
 
             var brojevi = PrebrojZnakove(SvaSlova);
 
+            var rezultat = IzracunajLjubavSusjednimBrojevima(brojevi);
 
+            int rjesenje = IzracunajLjubavPrviPaZadnjiBroj(brojevi);
 
             Console.WriteLine(string.Join('|', SvaSlova.ToArray()));
             Console.WriteLine(string.Join('|', brojevi));
 
-            
-            int zbroj = 0;
-            int lijeviIndex = 0;
-            int desniIndex = brojevi.Length - 1;
+            Console.WriteLine("Vasa ljubav iznosi {0} %",rezultat);
 
-            while (lijeviIndex <= desniIndex && zbroj >= 100)
-            {
-                zbroj = brojevi[lijeviIndex] + brojevi[desniIndex];
-                Console.WriteLine($"Zbroj {lijeviIndex}. i {desniIndex}. elementa: {zbroj}");
-                lijeviIndex++;
-                desniIndex--;
-            }
 
-            Console.WriteLine(zbroj);
+
+
+
         }
 
+        private static int IzracunajLjubavPrviPaZadnjiBroj(int[] brojevi)
+        {
+            // ova metoda treba zbrajati brojeve logikom prvi pa zadnji, drugi pa predzadnji itd.
+            // ako ostane broj na kraju zbrajanja njega prepisujemo
 
+            return 0;
+        }
+
+        private static int IzracunajLjubavSusjednimBrojevima(int[]brojevi)
+        {
+            // ova metoda treba vratiti zbroj svih brojeva u nizu
+            int sum = 0;
+            foreach (var broj in brojevi)
+            {
+                sum += broj;
+            }
+            return sum;
+        }
+
+        
 
         private static int[] PrebrojZnakove(string SvaSlova)
         {
