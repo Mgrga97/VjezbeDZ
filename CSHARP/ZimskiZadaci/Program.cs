@@ -1,5 +1,7 @@
 ﻿using ZimskiZadaci;
 
+
+
 E16LjubavniKalkulator.Izvedi();
 
 // E16Z10Kalkulator.Izvedi();

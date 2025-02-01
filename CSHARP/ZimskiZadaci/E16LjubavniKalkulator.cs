@@ -14,52 +14,28 @@ namespace ZimskiZadaci
 
         {
 
-            string ona = E12Metode.UcitajString("Unesi svoje ime: "); //marta
+            string PrvoIme = E12Metode.UcitajString("Unesi svoje ime: "); //marta
 
-            string on = E12Metode.UcitajString("Unesi ime simpatije: "); //manuel
+            string DrugoIme = E12Metode.UcitajString("Unesi ime simpatije: "); //manuel
 
-            var SvaSlova = ona.Trim().ToLower() + on.Trim().ToLower();
+            var SvaSlova = PrvoIme.Trim().ToLower() + DrugoIme.Trim().ToLower();
 
 
             Console.WriteLine(SvaSlova);
 
-            var brojevi = PrebrojZnakove(SvaSlova);
-
-            var rezultat = IzracunajLjubavSusjednimBrojevima(brojevi);
-
-            int rjesenje = IzracunajLjubavPrviPaZadnjiBroj(brojevi);
-
-            Console.WriteLine(string.Join('|', SvaSlova.ToArray()));
-            Console.WriteLine(string.Join('|', brojevi));
-
-            Console.WriteLine("Vasa ljubav iznosi {0} %",rezultat);
+            int[] brojevi = PrebrojZnakove(SvaSlova);
 
 
+            //Console.WriteLine(string.Join('|', SvaSlova.ToArray()));
+            //Console.WriteLine(string.Join('|', brojevi));
 
+            int rjesenje = IzracunajPostotak(brojevi);
+
+            Console.WriteLine("rjesenje {0} %", rjesenje);
 
 
         }
 
-        private static int IzracunajLjubavPrviPaZadnjiBroj(int[] brojevi)
-        {
-            // ova metoda treba zbrajati brojeve logikom prvi pa zadnji, drugi pa predzadnji itd.
-            // ako ostane broj na kraju zbrajanja njega prepisujemo
-
-            return 0;
-        }
-
-        private static int IzracunajLjubavSusjednimBrojevima(int[]brojevi)
-        {
-            // ova metoda treba vratiti zbroj svih brojeva u nizu
-            int sum = 0;
-            foreach (var broj in brojevi)
-            {
-                sum += broj;
-            }
-            return sum;
-        }
-
-        
 
         private static int[] PrebrojZnakove(string SvaSlova)
         {
@@ -84,18 +60,47 @@ namespace ZimskiZadaci
             return brojevi;
         }
 
+        private static int IzracunajPostotak(int[] brojevi)
+        {
 
-        
-        
-            
-            
-        
+            List<int> niz = brojevi.ToList();
 
+            while (niz.Count > 2)
+            {
+                List<int> noviNiz = new List<int>();
+
+                for (int i = 0; i < niz.Count / 2; i++)
+                {
+                    int zbroj = niz[i] + niz[niz.Count - 1 - i];
+                    if (zbroj >= 10)
+                    {
+                        noviNiz.Add(zbroj % 10);
+                        noviNiz.Add(zbroj / 10);
+                    }
+                    else
+                    {
+                        noviNiz.Add(zbroj);
+                    }
+                    Console.WriteLine($"Zbrajanje: {niz[i]} + {niz[niz.Count - 1 - i]} = {zbroj}");
+                }
+
+                if (niz.Count % 2 != 0)
+                {
+                    noviNiz.Add(niz[niz.Count / 2]);
+                    Console.WriteLine($"Dodavanje srednjeg elementa: {niz[niz.Count / 2]}");
+                }
+
+                niz = noviNiz;
+                Console.WriteLine($"Trenutni niz: {string.Join(", ", niz)}");
+            }
+
+            int postotak = niz[0] * 10 + niz[1];
+            return postotak % 100;
+
+
+        }
 
     }
-
-
-
 
 }
 
