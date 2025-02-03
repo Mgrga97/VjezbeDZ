@@ -91,3 +91,52 @@ sifra int not null primary key identity(1,1),
 sestra int not null references sestra(sifra),
 svekar int not null references svekar(sifra)
 );
+
+-- Umetanje podataka
+-- Tablica: punac
+insert into punac (ogrlica, gustoca, hlace) 
+values 
+(3, 1634, 'Jeans'),
+(5, 2.54, 'Kratke hlače');
+
+-- Tablica: cura
+insert into cura (sifra, novcica, gustoca, lipa, ogrlica, bojakose, suknja, punac) 
+values 
+(1, 107, 2.34, 8273, 1, 'Plava', 'Mini suknja', 1),
+(2, 200, 3245.62, 210, 2, 'Smeđa', 'Duga suknja', 2);
+
+-- Tablica: sestra
+insert into sestra (introvertno, haljina, maraka, hlace, narukvica)
+values 
+(1, 'Crvena', 150.21, 'Traperice', 2),
+(0, 'Plava', 250.56, 'Kratke', 3);
+
+-- Tablica: zena
+insert into zena (treciputa, hlace, kratkamajica, jmbag, bojaociju, haljina, sestra)
+values 
+('2025-01-19', 'Crne', 'Bijela', '12345678901', 'Smeđa', 'Crvena', 1),
+('2025-01-20', 'Plave', 'Zelena', '10987654321', 'Plava', 'Plava', 2);
+
+-- Tablica: muskarac
+insert into muskarac (bojaociju, hlace, modelnaocala, maraka, zena)
+values 
+('Plava', 'Smeđe', 'Ray-Ban', 300, 1),
+('Zelena', 'Crne', 'Oakley', 401, 2);
+
+-- Tablica: mladic
+insert into mladic (suknja, kuna, drugiputa, asocijalno, ekstroventno, dukserica, muskarac)
+values 
+('Mini', 109, '2025-01-21', 0, 1, 'Crvena', 1),
+('Midi', 200.87, '2025-01-22', 1, 0, 'Zelena', 2);
+
+-- Tablica: svekar
+insert into svekar (bojaociju, prstena, dukserica, lipa, eura, majica)
+values 
+('Plava', 1, 'Crvena', 8, 1067, 'Bijela'),
+('Smeđa', 2, 'Plava', 81, 210, 'Crna');
+
+-- Tablica: sestra_svekar
+insert into sestra_svekar (sestra, svekar)
+values 
+(1, 1),
+(2, 2);
