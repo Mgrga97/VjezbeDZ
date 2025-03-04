@@ -2,7 +2,9 @@
 
 using Ucenje;
 
-E14Vjezbanje.Izvedi();
+
+
+ E14Vjezbanje.Izvedi();
 
 // E13Z2.Izvedi();
 

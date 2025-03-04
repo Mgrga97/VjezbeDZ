@@ -1,8 +1,10 @@
 ﻿using ZimskiZadaci;
 
+ GeneratorLozinke.Izvedi();
 
+ // VjezbaPatterns.Izvedi();
 
-E16LjubavniKalkulator.Izvedi();
+// LjubavniKalkulator.Izvedi();
 
 // E16Z10Kalkulator.Izvedi();
 

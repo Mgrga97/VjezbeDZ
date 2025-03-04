@@ -189,8 +189,23 @@ namespace Ucenje
 
         public static bool UcitajBool(string poruka, string uvjetZaTrue)
         {
-            Console.Write(poruka);
-            return Console.ReadLine().Trim().ToUpper()==uvjetZaTrue.ToUpper();
+            Console.Write($"{poruka} (da/ne): ");
+            string unos = Console.ReadLine().Trim().ToLower();
+
+            // Provjeravamo unos u odnosu na uvjet
+            if (unos == "da")
+            {
+                return true; // Ako je unos "da", vraćamo true
+            }
+            else if (unos == "ne")
+            {
+                return false; // Ako je unos "ne", vraćamo false
+            }
+            else
+            {
+                Console.WriteLine("Neispravan unos. Molimo unesite 'da' ili 'ne'.");
+                return UcitajBool(poruka, uvjetZaTrue); // Rekurzivni poziv za ponovni unos
+            }
         }
 
 

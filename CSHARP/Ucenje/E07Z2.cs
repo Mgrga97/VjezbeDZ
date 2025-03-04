@@ -29,34 +29,40 @@ namespace Ucenje
             }
             */
 
-            Console.WriteLine("Unesite prvi broj ");
-            int prvibroj = int.Parse(Console.ReadLine());
+            // korisnik unosi dva broja
+            // ispisujemo sve brojeve između
 
-            Console.WriteLine("Unesite drugi broj");
-            int drugibroj = int.Parse(Console.ReadLine());
+            var brojJedan = E12Metode.UcitajCijeliBroj("Unesi prvi broj: ");
+            var brojDva = E12Metode.UcitajCijeliBroj("Unesi drugi broj: ");
 
-            
 
-            // Provjeravamo jesu li brojevi jednaki
-            if (prvibroj == drugibroj)
+            if (brojJedan > brojDva)
             {
-                Console.WriteLine("Brojevi su jednaki.");
+                for (int i = brojDva; i <= brojJedan; i++)
+                {
+                    if (i == brojDva)
+                    {
+                        continue;
+                    }
+                    Console.WriteLine(i);
+
+                }
+
+            }
+            else if (brojJedan < brojDva)
+            {
+                for (int i = brojJedan; i <= brojDva; i++)
+                {
+                    if (i == brojJedan)
+                    {
+                        continue;
+                    }
+                    Console.WriteLine(i);
+                }
             }
             else
             {
-                // Određujemo manji i veći broj // otvaramo dvije varijable unutar else-a koje će prepoznati vrijednosti u unesenim brojevima od korisnika i smjestiti ih unutra
-                int manji = prvibroj < drugibroj ? prvibroj : drugibroj;
-                int veci = prvibroj > drugibroj ? prvibroj : drugibroj;
-
-
-                // Ispisujemo brojeve između manji+1 i veci-1
-                Console.WriteLine("Brojevi između " + manji + " i " + veci + " su:");
-
-                for (int i = manji + 1; i < veci; i++)
-                {
-                    Console.WriteLine(i); // Ispis svakog broja
-                }
-
+                Console.WriteLine("Brojevi su jednaki");
             }
 
 
